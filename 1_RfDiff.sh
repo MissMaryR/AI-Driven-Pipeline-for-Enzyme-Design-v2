@@ -42,7 +42,7 @@ apptainer run --bind /quobyte:/quobyte \
     diffuser.T=100 \
     inference.output_prefix="${output_prefix}" \
     inference.input_pdb="${input_pdb_path}" \
-    contigmap.contigs="['A1-151,30-30,A159-319,B1-319,C1-319']" \
+    contigmap.contigs="['A1-151,30-30,A159-300,B1-300,C1-300']" \
     inference.ligand=4EP \
     inference.num_designs=2
 } || { echo "Error: RFDiffusion step failed."; exit 1; }
