@@ -84,13 +84,7 @@ python 4_AF3_bulk.py /path/to/your/project/round_name/top_5_af3_inputs \
     --af3-dir /path/to/alphafold3
 ```
 
-Or just run separate:
-```
-sbatch 1_RfDiff.sh
-```
-etc
-
----
+Or just run separate, shown below.
 
 ## 1) RFDiffusion — Backbone Generation
 
