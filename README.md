@@ -92,7 +92,7 @@ Configure `1_RfDiff.sh`:
 
 - **`CONTIGS`**: Defines the protein topology and where the new loop is inserted.
   - Format: `'[ChainResStart-ResEnd,insert_len-insert_len,ChainResStart-ResEnd,...]'`
-  - Example: `['A1-150,12-12,A155-200,B1-200,C1-200']` inserts 12 residues between A151 and A155 in a homotrimer
+  - Example: `['A1-150,12-12,A155-200,B1-200,C1-200']` inserts 12 residues between A150 and A155 in a homotrimer
   - See the [RFDiffusion All-Atom docs](https://github.com/baker-laboratory/rf_diffusion_all_atom) for full syntax
 - **`NUM_DESIGNS`**: Designs per array task. Also update `--array=0-N` in the SBATCH header.
 
