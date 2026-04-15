@@ -20,13 +20,10 @@ The following tools must be installed and accessible on your HPC cluster:
 - SLURM workload manager
 - Apptainer/Singularity
 
-Optional (for visualization):
-```bash
+Run after opening HIVE:
+```
 module load conda/latest
-conda create -n pymol_env -y python=3.10
-conda activate pymol_env
-conda install -c conda-forge -c schrodinger pymol-bundle
-conda deactivate
+module load cuda/12.6.2
 ```
 
 ---
