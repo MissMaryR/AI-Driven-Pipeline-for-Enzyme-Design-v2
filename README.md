@@ -93,7 +93,7 @@ squeue -u <username> -o%j -h | sort | uniq -c | sort -rn    #shows your jobs org
 squeue -j <job_id>                     # Check job status
 squeue -j <job_id> -t all              # Check all array tasks
 scancel <job_id>                       # Cancel job
-tail -f top_5_af3_inputs/logs/rf_out_*.out  # Monitor live logs
+tail -f /logs/rf_out_*.out  # Monitor live logs
 ```
 
 ## 1) RFDiffusion — Backbone Generation
