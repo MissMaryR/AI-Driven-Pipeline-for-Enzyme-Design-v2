@@ -105,6 +105,7 @@ Configure `1_RfDiff.sh`:
   - Multimer Example: `['A1-100,12-12,A102-200,B1-200,C1-200']` inserts 12 residues between A100 and A102 in a trimer on chain A
   - note - RFdiffusion doesnt support design on 3 chains simultaneously, we have to do RFDiffusion on one chain and then LigandMPNN can take that chain and design on it as a trimer
   - Monomer Example: `['A1-100,12-12,A102-200']` inserts 12 residues between A100 and A102 in a single chain A
+  - The insert amount can be adjusted to a range ex: 10-20 and will generate a range of structures, but deciding on one length is critical for this pipeline as LigandMPNN needs specific residues to design on which can vary when running a range. We use a script later on that reads the 1_RFDiff script and automatically updates the designed residues in 2_LigMPNN but it must be in the 12-12 format. 
   - See the [RFDiffusion All-Atom docs](https://github.com/baker-laboratory/rf_diffusion_all_atom) for full syntax
 - **`--array`**: adjust this to decide how many designs to generate
 - each design takes 20-40 minutes to run
