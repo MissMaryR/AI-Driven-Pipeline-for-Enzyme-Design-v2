@@ -95,6 +95,7 @@ Configure `1_RfDiff.sh`:
   - Example: `['A1-150,12-12,A155-200,B1-200,C1-200']` inserts 12 residues between A150 and A155 in a homotrimer
   - See the [RFDiffusion All-Atom docs](https://github.com/baker-laboratory/rf_diffusion_all_atom) for full syntax
 - **`NUM_DESIGNS`**: Designs per array task. Also update `--array=0-N` in the SBATCH header.
+- **`update_MPNN.py`**: use script with python3 update_MPNN.py in same directory to update the 2_LigMPNN.sh with your current RFDiffusion contigmap
 
 Run:
 ```bash
