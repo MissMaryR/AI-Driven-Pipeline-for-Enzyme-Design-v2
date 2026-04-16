@@ -124,10 +124,11 @@ Output: `outputs/` folder with PDBs named `{array_id}_{design_id}.pdb` (e.g. `0_
 
 Configure `2_LigMPNN.sh`:
 
-- **update_MPNN.py**: use script in same directory (on your mac) to update the 2_LigMPNN.sh with your current RFDiffusion contigmap
+- **update_MPNN.py**: use script in same directory (on your mac) as 2_LigMPNN.sh and 1_RfDiff.sh contigmap
   ```
   python3 update_MPNN.py
-  ``` 
+  ```
+  - this will update the redesigned residues in 2_LigMPNN to match the inserts you chose in 1_RFDiff
 - **`--array`**: Must match `1_RfDiff.sh`.
 - **`NUM_RUNS`**: How many independent LigandMPNN sequences to generate per design (default: 10)
 - **`--symmetry_residues`**: Comma-separated residue IDs that should be kept symmetric across chains (e.g. `A1,A2,A3`). Useful for homotrimers where the inserted loop must be identical on all chains.
