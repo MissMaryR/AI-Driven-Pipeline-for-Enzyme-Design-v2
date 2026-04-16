@@ -4,14 +4,8 @@ Parses contigmap.contigs from 1_RfDiff.sh to find all inserted (gap) residues,
 calculates their output PDB residue numbers accounting for cumulative insertions,
 and overwrites --redesigned_residues in 2_LigMPNN.sh with the result.
 
-Contig format recap:
-  A1-151   → fixed segment: A-chain residues 1-151  (length 151)
-  12-12    → insertion: 12 new residues (not from PDB)
-  A155-183 → fixed segment: A-chain residues 155-183 (length 29)
-  1-1      → insertion: 1 new residue
-  A185-262 → fixed segment: ...
-  B1-262   → fixed B-chain segment
-  C1-262   → fixed C-chain segment
+use:
+python3 update_MPNN.py
 
 Output numbering logic (per chain):
   - Fixed segments keep their original PDB numbers, but are SHIFTED upward
