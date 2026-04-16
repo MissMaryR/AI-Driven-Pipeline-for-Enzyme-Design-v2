@@ -96,7 +96,7 @@ Configure `1_RfDiff.sh`:
   - See the [RFDiffusion All-Atom docs](https://github.com/baker-laboratory/rf_diffusion_all_atom) for full syntax
 - **`NUM_DESIGNS`**: Designs per array task. Also update `--array=0-N` in the SBATCH header.
 
-  **update_MPNN.py**: use script in same directory to update the 2_LigMPNN.sh with your current RFDiffusion contigmap
+**update_MPNN.py**: use script in same directory to update the 2_LigMPNN.sh with your current RFDiffusion contigmap
   ```
   python3 update_MPNN.py
   ``` 
