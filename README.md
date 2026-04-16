@@ -206,9 +206,9 @@ To generate more designs, update these values consistently across scripts:
 | Parameter | Script | Default |
 |---|---|---|
 | `--array=0-1` | `1_RfDiff.sh` | 2 array tasks |
-| `inference.num_designs=2` | `1_RfDiff.sh` | 2 designs per task |
+| `inference.num_designs=1` | `1_RfDiff.sh` | 2 designs per task |
 | `NUM_RFD_TASKS=2` | `2_LigMPNN.sh` | Must match above |
-| `NUM_DESIGNS=2` | `2_LigMPNN.sh`, `3_Top5.sh` | Must match above |
+| `NUM_DESIGNS=1` | `2_LigMPNN.sh`, `3_Top5.sh` | Must match above |
 | `--array=0-3` | `2_LigMPNN.sh` | `NUM_RFD_TASKS * NUM_DESIGNS - 1` |
 | `ARRAY_IDS="0 1"` | `3_Top5.sh` | Must match array range in step 1 |
 | `NUM_RUNS=10` | `2_LigMPNN.sh`, `3_Top5.sh` | Sequences per design |
