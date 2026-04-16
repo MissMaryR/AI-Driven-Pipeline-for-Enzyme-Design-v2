@@ -20,11 +20,6 @@ The following tools must be installed and accessible on your HPC cluster:
 - SLURM workload manager
 - Apptainer/Singularity
 
-Run after opening HIVE:
-```
-module load conda/latest
-module load cuda/12.6.2
-```
 
 ---
 
