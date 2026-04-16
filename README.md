@@ -106,11 +106,6 @@ Configure `1_RfDiff.sh`:
   - See the [RFDiffusion All-Atom docs](https://github.com/baker-laboratory/rf_diffusion_all_atom) for full syntax
 - **`--array`**: adjust this to decide how many designs to generate
 
-**update_MPNN.py**: use script in same directory (on your mac) to update the 2_LigMPNN.sh with your current RFDiffusion contigmap
-  ```
-  python3 update_MPNN.py
-  ``` 
-
 Run:
 ```bash
 sbatch 1_RfDiff.sh
@@ -125,8 +120,11 @@ Output: `outputs/` folder with PDBs named `{array_id}_{design_id}.pdb` (e.g. `0_
 
 Configure `2_LigMPNN.sh`:
 
-- **`REDESIGNED_RESIDUES`**: Space-separated chain+residue IDs for the inserted loop (e.g. `A152 A153 ... A163`). Check the residue numbering in your RFDiffusion output PDBs. Use `update_MPNN.py` to compute this automatically from your contigs (see Step 1).
-- **`NUM_RFD_TASKS`**, **`NUM_DESIGNS`**: Must match `1_RfDiff.sh`. Update `--array` accordingly: `--array=0-$((NUM_RFD_TASKS * NUM_DESIGNS - 1))`
+- **update_MPNN.py**: use script in same directory (on your mac) to update the 2_LigMPNN.sh with your current RFDiffusion contigmap
+  ```
+  python3 update_MPNN.py
+  ``` 
+- **`--array`**: Must match `1_RfDiff.sh`.
 - **`NUM_RUNS`**: How many independent LigandMPNN sequences to generate per design (default: 10)
 - **`--symmetry_residues`**: Comma-separated residue IDs that should be kept symmetric across chains (e.g. `A1,A2,A3`). Useful for homotrimers where the inserted loop must be identical on all chains.
 - **`--symmetry_weights`**: Comma-separated weights for each symmetry group (must sum to 1, e.g. `0.33,0.33,0.33`). Must have the same number of entries as `--symmetry_residues`.
@@ -138,8 +136,6 @@ sbatch 2_LigMPNN.sh
 ```
 
 Output: `MPNN_outputs/` with one subfolder per design per run, each containing a `seqs/` directory with `.fa` files.
-
-Default with 2 tasks × 2 designs × 10 runs = **40 total sequence designs**.
 
 ---
 
