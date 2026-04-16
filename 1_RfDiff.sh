@@ -27,7 +27,6 @@ export MKL_SERVICE_FORCE_INTEL=1
 export DGLBACKEND=pytorch
 
 # Load modules
-module load conda/latest
 module load apptainer/latest
 
 # Activate conda environment
