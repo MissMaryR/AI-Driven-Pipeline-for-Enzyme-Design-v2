@@ -124,7 +124,7 @@ Output: `outputs/` folder with PDBs named `{array_id}_{design_id}.pdb` (e.g. `0_
 
 Configure `2_LigMPNN.sh`:
 
-- **update_MPNN.py**: use script in same directory (on your mac) as 2_LigMPNN.sh and 1_RfDiff.sh contigmap
+- **update_MPNN.py**: use script in same directory (on your mac) as 2_LigMPNN.sh and 1_RfDiff.sh
   ```
   python3 update_MPNN.py
   ```
