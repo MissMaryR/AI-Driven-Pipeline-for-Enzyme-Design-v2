@@ -118,7 +118,6 @@ sbatch 1_RfDiff.sh
 
 Output: `outputs/` folder with PDBs named `{array_id}_{design_id}.pdb` (e.g. `0_0.pdb`, `0_1.pdb`)
 
-> **Note:** RFDiffusion drops the ligand chain and any extra protein chains from output PDBs — this is expected. Downstream scripts handle this.
 
 ---
 
