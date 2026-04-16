@@ -1,4 +1,4 @@
-# AI-Driven Pipeline for Enzyme Design
+# AI-Driven Pipeline for Enzyme Design with a Trimeric Structure
 ## RFDiffusion → LigandMPNN → AlphaFold3
 ### Design enzymes with novel inserted sequences
 
