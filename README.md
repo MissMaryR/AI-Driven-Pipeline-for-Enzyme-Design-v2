@@ -86,6 +86,16 @@ python 4_AF3_bulk.py /path/to/your/project/round_name/top_5_af3_inputs
 
 Or just run separate, shown below.
 
+Useful monitoring commands:
+```bash
+squeue -u <username>         #shows all of your running jobs
+squeue -u <username> -o%j -h | sort | uniq -c | sort -rn    #shows your jobs organized by job name
+squeue -j <job_id>                     # Check job status
+squeue -j <job_id> -t all              # Check all array tasks
+scancel <job_id>                       # Cancel job
+tail -f top_5_af3_inputs/logs/rf_out_*.out  # Monitor live logs
+```
+
 ## 1) RFDiffusion — Backbone Generation
 
 Configure `1_RfDiff.sh`:
@@ -190,14 +200,6 @@ This script automatically finds all JSON files, generates a SLURM array job scri
 Output:
 - `top_5_af3_inputs/top_5_af3_inputs_output/<name>/` — AF3 predictions per design
 - `top_5_af3_inputs/logs/` — SLURM logs per job
-
-Useful monitoring commands:
-```bash
-squeue -j <job_id>                     # Check job status
-squeue -j <job_id> -t all              # Check all array tasks
-scancel <job_id>                       # Cancel job
-tail -f top_5_af3_inputs/logs/af3_*.out  # Monitor live logs
-```
 
 ---
 
