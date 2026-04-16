@@ -105,6 +105,7 @@ Configure `1_RfDiff.sh`:
   - Example: `['A1-100,12-12,A102-200,B1-200,C1-200']` inserts 12 residues between A100 and A102 in a trimer
   - See the [RFDiffusion All-Atom docs](https://github.com/baker-laboratory/rf_diffusion_all_atom) for full syntax
 - **`--array`**: adjust this to decide how many designs to generate
+- each design takes 20-40 minutes to run
 
 Run:
 ```bash
