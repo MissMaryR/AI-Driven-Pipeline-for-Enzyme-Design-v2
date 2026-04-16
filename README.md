@@ -128,7 +128,9 @@ Configure `2_LigMPNN.sh`:
   ```
   python3 update_MPNN.py
   ```
-  - this will update the redesigned residues in 2_LigMPNN to match the inserts you chose in 1_RFDiff
+  - this will update the **`--redesigned_residues`** in 2_LigMPNN to match the inserts you chose in 1_RFDiff
+  - we are only designing on the residues that were created from RFDiffusion
+  - its common to also design a couple of residues on either side of the insert, you can adjust as needed
 - **`--array`**: Must match `1_RfDiff.sh`.
 - **`NUM_RUNS`**: How many independent LigandMPNN sequences to generate per design (default: 10)
 - **`--symmetry_residues`**: Comma-separated residue IDs that should be kept symmetric across chains (e.g. `A1,A2,A3`). Useful for homotrimers where the inserted loop must be identical on all chains.
