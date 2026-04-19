@@ -73,23 +73,6 @@ Your `docked.pdb` should contain:
 
 ---
 
-## Running the Pipeline
-
-Submit all steps with SLURM dependencies so each waits for the previous to finish:
-
-```bash
-cd /path/to/your/project/round_name
-
-jid1=$(sbatch --parsable 1_RfDiff.sh)
-jid2=$(sbatch --parsable --dependency=afterok:$jid1 2_LigMPNN.sh)
-jid3=$(sbatch --parsable --dependency=afterok:$jid2 3_Top5.sh)
-# 3_Top5.sh auto-submits 4_AF3_bulk.py when it finishes.
-# To submit AF3 manually (e.g. on a custom JSON folder):
-python 4_AF3_bulk.py /path/to/your/project/round_name/top_5_af3_inputs
-```
-
-Or just run separate, shown below.
-
 Useful monitoring commands:
 ```bash
 squeue -u <username>         #shows all of your running jobs
