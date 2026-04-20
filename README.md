@@ -46,7 +46,6 @@ Notes:
 - "End-to-end (parallel)" assumes SLURM lets you run ~10 array tasks concurrently. A busier cluster will stretch the top two rows proportionally; a less busy one (or a bigger share of GPUs) can collapse them toward the single-task cost.
 - `1_RfDiff.sh` sets `--time=01:30:00` per array task, `2_LigMPNN.sh` sets `--time=00:15:00`. If you increase `inference.num_designs` so that a single task runs multiple designs serially, bump script 1's wall time accordingly (30–40 min per design).
 - Step 4 runs a fixed 5 AF3 predictions regardless of how many RFDiff designs you generated, so it doesn't scale with the other steps.
-- Step 3 is cheap enough to run on a login node with `bash 3_Top5.sh` if you'd rather skip the queue.
 
 ---
 
