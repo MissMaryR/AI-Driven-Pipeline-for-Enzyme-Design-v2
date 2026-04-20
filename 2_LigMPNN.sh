@@ -34,7 +34,7 @@ conda activate /quobyte/jbsiegelgrp/software/envs/ligandmpnn_env
 LIGAND_MPNN_DIR="/quobyte/jbsiegelgrp/software/LigandMPNN"
 cd "$LIGAND_MPNN_DIR"
 
-pdb_file="/quobyte/jbsiegelgrp/username/${round}/outputs/${num1}_${num2}.pdb"
+pdb_file="/quobyte/jbsiegelgrp/<username>/${round}/outputs/${num1}_${num2}.pdb"
 filename="${num1}_${num2}"
 
 if [[ ! -f "$pdb_file" ]]; then
