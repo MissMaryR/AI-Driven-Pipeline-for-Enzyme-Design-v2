@@ -47,7 +47,7 @@ for task_id in $(seq 0 $(( NUM_RFD_TASKS * NUM_DESIGNS - 1 ))); do
 
     for i in $(seq 1 $NUM_RUNS); do
 
-        fa_file="/quobyte/jbsiegelgrp/missmaryr/laccase/${round}/MPNN_outputs/${filename}_run${i}/seqs/${filename}.fa"
+        fa_file="/quobyte/jbsiegelgrp/<username>/${round}/MPNN_outputs/${filename}_run${i}/seqs/${filename}.fa"
 
         if [[ -f "$fa_file" ]]; then
             line=$(sed -n '3p' "$fa_file")
@@ -73,7 +73,7 @@ fi
 sorted_results=$(printf "%s\n" "${results[@]}" | sort -k1,1nr | head -n 5)
 
 # Save ranking summary
-output_file="/quobyte/jbsiegelgrp/missmaryr/laccase/${round}/top_5_overall_confidence.txt"
+output_file="/quobyte/jbsiegelgrp/<username>/${round}/top_5_overall_confidence.txt"
 {
     echo "Top 5 overall confidence scores:"
     echo "Overall Confidence | Filename | ID | T | Seed | Ligand Confidence | Seq Rec | File Path"
@@ -83,7 +83,7 @@ output_file="/quobyte/jbsiegelgrp/missmaryr/laccase/${round}/top_5_overall_confi
 echo "Top 5 summary written to: $output_file"
 
 # Write top 5 AlphaFold3 JSON files
-output_dir="/quobyte/jbsiegelgrp/missmaryr/laccase/${round}/top_5_af3_inputs"
+output_dir="/quobyte/jbsiegelgrp/<username>/${round}/top_5_af3_inputs"
 mkdir -p "$output_dir"
 
 rank=1
