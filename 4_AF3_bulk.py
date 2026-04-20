@@ -5,9 +5,6 @@ Generated with Siegel Lab HIVE Cluster Skill v1.1
 Finds all JSON files in the current directory (or a provided directory) and
 submits them as a SLURM array job with GPU monitoring and runtime reporting.
 
-Usage:
-    python AF3_bulk.py               # uses current working directory
-    python AF3_bulk.py <directory>   # uses specified directory
 """
 
 import sys
