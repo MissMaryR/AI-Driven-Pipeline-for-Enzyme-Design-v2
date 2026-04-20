@@ -39,8 +39,8 @@ CONTAINER=${SCRIPT_DIR}/rf_se3_diffusion.sif
 # Change to the rf_diffusion_all_atom directory
 cd ${SCRIPT_DIR}
 
-input_pdb_path="/quobyte/jbsiegelgrp/missmaryr/laccase/${round}/docked.pdb"
-output_prefix="/quobyte/jbsiegelgrp/missmaryr/laccase/${round}/outputs/${SLURM_ARRAY_TASK_ID}"
+input_pdb_path="/quobyte/jbsiegelgrp/<username>/${round}/docked.pdb"
+output_prefix="/quobyte/jbsiegelgrp/<username>/${round}/outputs/${SLURM_ARRAY_TASK_ID}"
 
 ######################### Run RFDiffusion #########################
 apptainer run --bind /quobyte:/quobyte \
@@ -48,7 +48,7 @@ apptainer run --bind /quobyte:/quobyte \
     diffuser.T=100 \
     inference.output_prefix="${output_prefix}" \
     inference.input_pdb="${input_pdb_path}" \
-    contigmap.contigs="['A1-151,13-13,A155-183,1-1,A185-262,B1-262,C1-262']" \
+    contigmap.contigs="['A1-150,12-12,A153-200,B1-200,C1-200']" \
     inference.ligand=4EP \
     inference.num_designs=1 \
 || { echo "Error: RFDiffusion step failed."; exit 1; }
