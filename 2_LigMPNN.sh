@@ -49,7 +49,5 @@ for i in $(seq 1 $NUM_RUNS); do
         --model_type "ligand_mpnn" \
         --pdb_path "$pdb_file" \
         --out_folder "$out_folder" \
-	--symmetry_residues "A1,A2,A3" \
-        --symmetry_weights "0.33,0.33,0.33" \
         --redesigned_residues "A151 A152 A153 A154 A155 A156 A157 A158 A159 A160 A161 A162"
 done
