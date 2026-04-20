@@ -43,7 +43,7 @@ if [[ ! -f "$pdb_file" ]]; then
 fi
 
 for i in $(seq 1 $NUM_RUNS); do
-    out_folder="/quobyte/jbsiegelgrp/username/${round}/MPNN_outputs/${filename}_run${i}"
+    out_folder="/quobyte/jbsiegelgrp/<username>/${round}/MPNN_outputs/${filename}_run${i}"
 
     python run.py \
         --model_type "ligand_mpnn" \
@@ -51,5 +51,5 @@ for i in $(seq 1 $NUM_RUNS); do
         --out_folder "$out_folder" \
 	--symmetry_residues "A1,A2,A3" \
         --symmetry_weights "0.33,0.33,0.33" \
-        --redesigned_residues "A152 A153 A154 A155 A156 A157 A158 A159 A160 A161 A162 A163 A164"
+        --redesigned_residues "A151 A152 A153 A154 A155 A156 A157 A158 A159 A160 A161 A162"
 done
