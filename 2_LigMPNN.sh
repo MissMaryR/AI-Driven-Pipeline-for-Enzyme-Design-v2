@@ -50,4 +50,5 @@ for i in $(seq 1 $NUM_RUNS); do
         --pdb_path "$pdb_file" \
         --out_folder "$out_folder" \
         --redesigned_residues "A151 A152 A153 A154 A155 A156 A157 A158 A159 A160 A161 A162"
+        --chains_to_design "A"
 done
