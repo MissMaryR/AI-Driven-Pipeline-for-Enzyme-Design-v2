@@ -155,8 +155,8 @@ Configure `2_LigMPNN.sh`:
   - its common to also design a couple of residues on either side of the insert, you can adjust as needed
 - **`--array`**: Must match `1_RfDiff.sh`.
 - **`NUM_RUNS`**: How many independent LigandMPNN sequences to generate per design (default: 10)
-- **`--symmetry_residues`**: Comma-separated residue IDs that should be kept symmetric across chains (e.g. `A1,A2,A3`). Useful for homotrimers where the inserted loop must be identical on all chains.
-- **`--symmetry_weights`**: Comma-separated weights for each symmetry group (must sum to 1, e.g. `0.33,0.33,0.33`). Must have the same number of entries as `--symmetry_residues`.
+- this script takes all chains A, B, C but only designs on the residues in chain A and leaves chain B & C as is
+- we fix this later by only taking the newly designed chain A and submitting that as a homotrimer to Alphafold3
 - See [LigandMPNN](https://github.com/dauparas/LigandMPNN) for additional options
 
 Run:
